@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+/* HEADER */
+header{
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    background-color: #18222c ;
+}
+
+#CuervoSoy{
+    font-size: 100px;
+}
+
+#escudo img {
+    grid-area: header;
+    height: 200px;
+    width: 200px;
+    margin-left: 30px;
+}
+
+nav{
+    grid-area: nav;
+    display: flex;
+    justify-content: center;
+    background-color: #18222c ;
+}
+
+ul.padreNav {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    text-align: right;
+
+}
+
+.padreNav li {
+    display: flex;
+    position: relative;
+    font-size: 20px;
+    border: solid   1px black;
+    padding: 10px;
+    align-items: center;
+    margin-right: 10px;
+    background-color: #1d2936;
+}
+
+.padreNav li:hover{
+    box-shadow: 3px 3px black;
+}
+
+ul.padreNav ul {
+    position: absolute;
+    display: none;
+    width: max-content;
+    
+}
+
+ul li:hover ul {
+    display: block;
+    padding-top: 245%;
+    
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+/* Sección principal INDEX*/
+
+main{
+    display: grid;
+    margin-top: 30px;  
+}
+
+#grid{
+    display: grid;
+    height: 2000px ;
+    width: 100vw;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 10% 85% 5% ;
+    grid-template-areas:"header nav"
+                        "seccion aside"
+                        "footer footer";  
+}
+
+#gridDos{
+    display: grid;
+    grid-template-columns: 15% 20% 30% 35%  ;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    text-align: right;
+}
+
+@media only screen and (max-width:768px){
+    #CuervoSoy{
+        font-size: 25px;
+    }
+    
+    #escudo img {
+        grid-area: header;
+        height: 100px;
+        width: 100px;
+        margin-left: 30px;
+    }
+    nav{
+        grid-area: nav;
+        display: flex;
+        justify-content: center;
+        background-color: #18222c ;
+    }
+    
+    ul.padreNav {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        text-align: right;
+    
+    }
+    
+    .padreNav li {
+        display: flex;
+        position: relative;
+        font-size: 10px;
+        border: solid   1px black;
+        padding: 10px;
+        align-items: center;
+        margin-right: 10px;
+        background-color: #1d2936;
+    }
+    
+    .padreNav li:hover{
+        box-shadow: 3px 3px black;
+    }
+    
+    ul.padreNav ul {
+        position: absolute;
+        display: none;
+        width: max-content;
+        
+    }
+    
+    ul li:hover ul {
+        display: block;
+        padding-top: 245%;
+        
+    }
+    
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    #grid{
+        display: grid;
+        height: 2000px ;
+        width: 100vw;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 15% 80% 5% ;
+        grid-template-areas:"header nav"
+                            "seccion aside"
+                            "footer footer";  
+    }
+    #gridDos{
+        grid-template-columns: 100%;
+        grid-template-rows: 25% 25% 25% 25%;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        text-align: right;
+    }
+    footer{
+        grid-area: footer;
+        justify-content: center;
+        background-color: #fb4248;
+        border-top: 1px solid   black;
+        display: flex;
+        flex-direction: column-reverse;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+    }
+section.cards{
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    justify-content: space-around;
+}
+
+.card{
+    display: flex;
+    border: 1px solid black;
+    border-radius: 5%;
+    flex-direction: column;
+    padding: 10px 10% 10px 10px;
+}
+
+.card p{
+    
+    text-align: justify;
+}
+
+.card h3{
+    font-size: 15px;
+}
+
+aside{
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* FOOTER */
+
+footer{
+    grid-area: footer;
+    justify-content: center;
+    background-color: #fb4248;
+    border-top: 1px solid   black;
+    display: flex;
+    flex-direction: column-reverse;
+    bottom: 0;
+    left: 0;
+    height: 4rem;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+.RedesSociales{
+    color: white;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+
+/* Sección Principal FIXTURE  */
+
+.fixture{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fixtureList{
+    list-style: none;
+    align-items: center;
+    text-align: center;
+}
+
+.res div{
+    align-items: center;
+    padding-right: 13%;
+}
+
+.res{
+    width: 100%;
+    display: flex;
+    border: 1px solid black;
+    justify-content: space-between;
+}
+
+
+
