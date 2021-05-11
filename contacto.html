@@ -14,11 +14,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
-    <title>¿Quienes Somos?</title>
+    <title>Contacto</title>
 </head>
 
 <body>
-    <div id="grid1">
+    <div id="grid2">
         <header class="header">
             <a href="index.html"><img class="header__logo" src="Img/SOYCUERVO (1).png" alt="Soy Cuervo"></a>
         </header>
@@ -26,34 +26,31 @@
             <ul class="menu__lista">
                 <li><a class="menu__item" href="fixture.html">Fixture</li>
                 <li><a class="menu__item" href="tabla_de_posiciones.html">Posiciones</a></li>
-                <li><a class="menu__item" href="quienes_somos.html">Quienes Somos?</a></li>
+                <li><a class="menu__item" href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
     
 
-    <main id="mainQuienes">  
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis soluta adipisci ipsam minus est quasi doloribus ullam, laborum non quo. Et nobis ut eos distinctio quod minima repudiandae quo assumenda!</p>
-        <h2>¿Queres formar parte? Dejanos tu contacto</h2>
-        <form action="#" method="GET">
-            <fieldset>
-                <label for="Nombre y Apellido">Ingrese su Nombre y Apellido</label>
-                <input type="text"  name="Nombre y Apellido" id="Nombre y Apellido" required>
-                <label for="email">Ingrese su Email</label>
-                <input type="email" name="email"    id="email"  required>
-            <fieldset>Hace cuanto sos socio del Club?
-                        <select name="Socio">
-                            <option value="no soy socio ">No soy socio</option>
-                            <option value="hace 2 anos o menos">Hace 2 años o menos</option>
-                            <option value="hace mas de 2 anos">Hace más de 2 años</option>
-                            <option value="hace mas de 5 anos">Hace más de 5 años</option>
-                            <option value="hace mas de 10">Hace más de 10 años</option>
-                            <option value="cuna">Desde la cuna</option>
-                        </select>
-            </fieldset>
-                    <input type="submit"    value="Enviar">
-                    <input type="reset" value="Borrar Datos">    
-            </fieldset>
-        </form>
+    <main class="contacto">
+        <div class="contacto__contenedor">
+            <div class="contacto__formulario">
+                <form action="#" method="GET">
+                        <label class="contacto__label"  for="Nombre">Nombre</label>
+                        <input class="contacto__input form-control" type="text" placeholder="Ej: Matias"  name="Nombre" required>
+                        <label class="contacto__label"  for="Apellido">Apellido</label>
+                        <input class="contacto__input form-control" type="text" placeholder="Ej: Vera"  name="Apellido" required>
+                        <label class="contacto__label"  for="email">Email</label>
+                        <input class="contacto__input form-control" type="email" placeholder="Ej: soycuervo@gmail.com" name="email" required>
+                        <label class="contacto__label" for="comentario">Déjanos un comentario</label>
+                        <textarea class="contacto__textarea form-control" name="comentario" placeholder="Max 240 caracteres" id="" cols="20" rows="5"></textarea>
+                        <input class="contacto__botonenviar" type="submit" id="enviar"    value="Enviar">
+                        <input class="contacto__botonreset" type="reset" value="Restablecer">   
+                </form>
+            </div>
+            <div class="contacto__imagen">
+                <img src="Img/contacto.jpg" alt="jugador ramirez">
+            </div>
+        </div> 
     </main>
 
     <footer>

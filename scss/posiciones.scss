@@ -1,0 +1,65 @@
+.mainposiciones {
+    grid-area: seccion;
+    margin-top: 50px;
+    margin-bottom: 20px;
+
+    &__header {
+        margin-left: 15%;
+    }
+
+    &__header h1 {
+        @include subtit;
+    }
+
+    &__section {
+        grid-area: seccion;
+        align-items: center;
+        margin: 60px 15% 10px;
+    }
+
+    &__section h2 {
+        text-align: left;
+        color: #eb1e2a;
+        font-size: 1.5rem;
+    }
+
+    &__tabla {
+        grid-area: seccion;
+        text-align: center;
+        border: 1px solid #aeb0b3;
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    &__cabecera {
+        border: 1px solid #aeb0b3;
+    }
+
+    &__cabecera th {
+        color: #fff;
+        background-color: #343a40;
+        padding: 10px;
+        border: 1px solid #aeb0b3;
+        font-weight: bolder;
+    }
+
+    &__equipo {
+        text-align: left;
+        padding-left: 10px;
+        border: 1px solid #dee2e6;
+    }
+
+    &__cuerpo {
+        border: 1px solid #aeb0b3;
+    }
+
+    &__cuerpo td {
+        padding: 10px;
+        border: 1px solid #aeb0b3;
+        font-weight: bolder;
+    }
+
+    &__escudos {
+        margin-left: 10px;
+    }
+}

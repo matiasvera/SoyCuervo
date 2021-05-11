@@ -1,0 +1,88 @@
+#grid2 {
+    display: grid;
+    width: 100vw;
+    height: 100%;
+    grid-template-columns: 60vw 40vw;
+    grid-template-rows: 170px 740px 8%;
+    grid-template-areas: "header nav"
+        "seccion seccion"
+        "footer footer";
+}
+
+.contacto{
+    grid-area: seccion;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+
+    &__contenedor{
+        grid-area: seccion;
+        background-color: aquamarine;
+        width: 60%;
+        height: 80%;
+        display: flex;
+        border:  #aeb0b3 solid 1px;
+        border-collapse: collapse;  
+    }
+
+    &__formulario{
+        background-color:#18222c ;
+        width: 50%;
+        
+    }
+        &__formulario form{
+            width: 100%;
+            height: 100%;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+    &__label{
+        color: white;
+        font-weight: lighter;
+        font-size: 20px;
+        margin: 10px;
+    }
+
+    &__input{
+        width: 80%;
+        height: 50px;
+        border-radius: 5%;
+    }
+
+    &__textarea{
+        width: 80%;
+        border-radius: 5%;
+    }
+
+    &__botonenviar{
+        width: 80%;
+        height: 80px;
+        margin-top: 30px;
+        border-radius: 5%;
+        background-color: #bc0808;
+        color: white;
+    }
+
+    &__botonreset{
+        width: 80%;
+        height: 80px;
+        margin-top: 30px;
+        border-radius: 5%;
+    }
+
+    &__imagen{
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+    }
+        &__imagen img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover ;
+        }
+}
+

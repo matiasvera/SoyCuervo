@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+// VARIABLES
+$color-subtit: #073a70 ;
+
+// MIXIN
+
+@mixin subtit {
+    font-weight: 900;
+    color:$color-subtit;
+    line-height: 100%;
+}

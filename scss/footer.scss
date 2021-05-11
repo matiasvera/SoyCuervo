@@ -1,0 +1,40 @@
+footer {
+    grid-area: footer;
+    background-color: #bc0808;
+    border-top: 1px solid black;
+    max-height: 100px;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.RedesSociales {
+    padding: 0;
+    color: white;
+    max-height: 100px;
+    width: 100%;
+
+    &__lista{
+        list-style: none;
+        width: 100%;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__item{
+        margin: 10px;
+
+    }
+
+    &__img{
+        width: 55px;
+        height: 55px;
+    }
+    
+    
+
+    & a {
+        text-decoration: none;
+    }
+}
