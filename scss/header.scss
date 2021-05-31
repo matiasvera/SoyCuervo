@@ -37,35 +37,18 @@
         margin-right: 20px;
         background-color: #18222c;
         list-style: none;
-        transition: all 1s;
-    }
-
-    &__lista li:hover {
-        box-shadow: 3px 3px black;
-        background-color: #AC0000;
+        transition: color text-decoration 1s;
     }
 
     &__item {
         text-decoration: none;
         color: white;
+        font-weight:600;
     }
 
     &__item:hover {
         color: white;
+        text-decoration: underline 2px #AC0000;
 
-    }
-
-    &__sublista {
-        position: absolute;
-        display: none;
-        width: max-content;
-        text-align: initial;
-    }
-
-    &__lista li:hover ul {
-        z-index: 1;
-        display: block;
-        padding-top: 14px;
-        padding-left: 0;
     }
 }

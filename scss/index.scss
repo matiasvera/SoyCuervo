@@ -2,10 +2,10 @@ body {
 
     div#grid {
         display: grid;
-        width: 100vw;
+        width: 100%;
         height: 100%;
-        grid-template-columns: 60vw 40vw;
-        grid-template-rows: 160px 30% 83% 8%;
+        grid-template-columns: 60% 40%;
+        grid-template-rows: 170px 600px auto 10%;
         grid-template-areas: "header nav"
             "carrusel carrusel"
             "seccion aside"
@@ -15,25 +15,28 @@ body {
 
 #carouselExampleIndicators {
     grid-area: carrusel;
+    max-height: 600px;
+}
+
+.carousel-inner{
+    max-height: 600px;
 }
 
 .d-block {
-    height: 601px;
+    object-fit: contain;
 }
 
 
 .noticias {
     grid-area: seccion;
-    min-height: 100vh;
+    height: auto;
     align-content: stretch;
     margin-top: 30px;
     padding-left: 10%;
 
     &__not {
         padding-left: 10px;
-        color: #1d2936;
-        text-decoration: underline #f61d24;
-    }
+        @include subtit;}
 
     &__cards {
 
@@ -41,49 +44,152 @@ body {
         display: flex;
         flex-direction: column;
         overflow: auto;
-        justify-content: space-around;
     }
 
     &__card {
         display: flex;
         flex-direction: column;
-        padding: 10px 10px 10px 10px;
+        padding: 0;
+        border: solid 2px #aeb0b3;
+        margin-bottom: 10px;
+    }
+
+    &__img{
+        width: 100%;
+        height: auto;
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        
+    }
+
+    &__img img{
+        width: 100%;
     }
 
     &__titulop {
+        font-size: 30px;
         font-weight: bold;
+        position: absolute;
+        background-color: white;
+        color: #eb1e2a;
+        top: 80%;
+        left: 10px;
+        padding: 2px 10px ;
+        text-decoration: underline 2px #073a70 ;
     }
 
     &__titulos {
+        padding: 10px;
         font-size: 15px;
+        font-weight: 600;
+        color: #073a70;
     }
 
     &__articulo {
+        padding: 0px 10px;
         text-align: justify;
+    }
+
+    &__notant{
+        width: 100%;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    &__boton{
+        padding: 5px 20px;
+        text-decoration: none;
+        background-color:#073a70;
+        color: white;
+        border-radius: 30%;
+        font-size: 15px;
+        transition: all 0.5s;
+    }
+
+    &__boton:hover{
+        color: #eb1e2a;
     }
 }
 
+#flecha{
+    font-weight: bolder;
+    font-size: 20px;
+}
+
 .aside {
-    margin-top: 30px;
+    margin-top: 100px;
     grid-area: aside;
     display: flex;
     flex-direction: column;
     align-items: center;
 
+    &__ultpartido{
+        width: 80%;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-color: #18222c;
+        border: solid 2px #aeb0b3;
+        border-radius: 3%;
+    }
+
     &__titulo {
-        color: #1d2936;
-        text-decoration: underline #f61d24;
+        font-weight: 900;
+        color:white;
+        line-height: 100%;
+        padding-top: 20px;
     }
 
     &__video {
-        margin-top: 30px;
-        width: 80%;
-        height: 30%;
+        padding: 0px 10px 10px 10px;
+        width: 100%;
+        height: 100%;
     }
 
 
     iframe {
         width: 100%;
-        height: 70%;
+        height: 100%;
+    }
+
+    &__redes{
+        border: solid 2px #aeb0b3;
+        width: 80%;   
+        margin-top: 50px;
+        background-color: #18222c;
+        border-radius: 3%;
+    }
+
+    &__redes h3{
+        font-weight: bolder;
+        font-size: 15px;
+        color: white;
+        padding: 10px 10px 0 10px;
+        margin: 0;
+    }
+
+    &__redes ul{
+        display: flex;
+        justify-content: space-around;
+        margin: 0;
+        padding: 10px;
+    }
+
+    &__redes ul li{
+        list-style: none;
+    }
+
+    &__iconos{
+        width: 40px;
+        transition: all 0.5s;
+    }
+
+    &__iconos:hover{
+        transform: scale(1.2);
+        border-radius: 25%;
     }
 }
